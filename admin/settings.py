@@ -47,8 +47,8 @@ INSTALLED_APPS = [
     'ckeditor_uploader',  # 富文本编辑器上传图片模块
 
     'content',
-    'passport',
-    'activity',
+    # 'passport',
+    # 'activity',
 
 
 
@@ -151,9 +151,9 @@ CKEDITOR_CONFIGS = {
 
 # 由于djang-ckeditor在ckeditor-init.js文件中使用了JQuery，所以要在settings.py中设置CKEDITOR_JQUERY_URL来指定JQuery库的路径
 EDITOR_JQUERY_URL = 'https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js'
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-CKEDITOR_UPLOAD_PATH = 'uploads/'
+MEDIA_URL = '/home/klm/PycharmProjects/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, '/home/klm/PycharmProjects/media/')
+CKEDITOR_UPLOAD_PATH = '/home/klm/PycharmProjects/media/uploads/'
 
 
 '''
