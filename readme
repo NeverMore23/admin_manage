@@ -1,4 +1,4 @@
-python3 xadmin
-
+pip install -r requirements.txt
 pip install xadmin
 pip uninstall xadmin
+
