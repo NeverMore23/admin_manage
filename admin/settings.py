@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'content',
     # 'passport',
     # 'activity',
+    'spider',
 
 
 

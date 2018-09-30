@@ -23,5 +23,6 @@ urlpatterns = [
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     # url(r'^passport/', include('passport.urls')),
     # url(r'^activity/', include('activity.urls')),
+    url(r'^spider/', include('spider.urls')),
 
 ]
