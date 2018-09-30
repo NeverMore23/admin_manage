@@ -5,7 +5,7 @@ from category.models import NewsCategory
 
 
 class Advertising(models.Model):
-    """图片广告"""
+    """广告"""
     __tablename__ = "advertising"
 
     id = models.IntegerField(primary_key=True, verbose_name='广告编号')  # 广告编号
@@ -25,5 +25,5 @@ class Advertising(models.Model):
 
     # 为我们创建的模型类和属性加上中文名称
     class Meta:
-        verbose_name = '广告图片'
+        verbose_name = '广告'
         verbose_name_plural = '广告'  # 设置复数的显示，否则会出现“广告s”

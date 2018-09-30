@@ -1,6 +1,8 @@
 # encoding:utf8
 from django.contrib import admin
 from advertising.models import Advertising
+
+
 # Register your models here.
 
 
@@ -16,6 +18,7 @@ class ArticleAdmin(admin.ModelAdmin):
     list_display = ('id', 'start_time', 'end_time')
     # 详细时间分层筛选　
     date_hierarchy = 'start_time'
+
 
 VERBOSE_APP_NAME = u"广告图片"
 admin.site.site_header = '北京源石智影--新闻广告资源管理系统'

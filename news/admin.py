@@ -11,6 +11,7 @@ def disable_status(modeladmin, request, queryset):
 def enable_status(modeladmin, request, queryset):
     queryset.update(is_enable=True)
 
+
 disable_status.short_description = '隐藏文章'
 enable_status.short_description = '显示文章'
 
@@ -32,14 +33,13 @@ class ArticleAdmin(admin.ModelAdmin):
     # 显示，隐藏的动作
     actions = [disable_status, enable_status]
 
+
 VERBOSE_APP_NAME = u"新闻文章"
 admin.site.site_header = '北京源石智影--新闻广告资源管理系统'
 admin.site.site_title = '北京源石智影有限公司'
 
-
 # 注册Model类
 admin.site.register(News, ArticleAdmin)
-
 
 # class TagGroupAdmin(admin.ModelAdmin):
 #     list_display = ('name',)

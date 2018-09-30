@@ -8,15 +8,16 @@ class News(models.Model):
     """文章"""
     __tablename__ = "users_news"
 
-    id = models.IntegerField(primary_key=True, verbose_name='文章编号')  # 新闻编号
-    title = models.CharField(max_length=200, verbose_name='文章标题')  # 新闻标题
-    content = RichTextField(null=False, verbose_name='文章内容')  # 新闻内容
-    status = models.IntegerField(default=0, verbose_name='审核状态')  #当前新闻状态 如果为0代表审核通过，1代表审核中，-1代表审核不通过
+    id = models.IntegerField(primary_key=True, verbose_name='文章编号')
+    title = models.CharField(max_length=200, verbose_name='文章标题')
+    content = RichTextField(null=False, verbose_name='文章内容')
+    status = models.IntegerField(default=0, verbose_name='审核状态')  # 当前新闻状态 如果为0代表审核通过，1代表审核中，-1代表审核不通过
     reason = models.CharField(max_length=200, verbose_name='未通过原因')  # 未通过原因，status = -1 的时候使用
-    timestamp = models.DateTimeField(verbose_name='发布日期', default="") # 发布日期
-    tag = models.CharField(max_length=200, verbose_name='标签', default='') # 关键字标签
+    timestamp = models.DateTimeField(verbose_name='发布日期', default="")
+    tag = models.CharField(max_length=200, verbose_name='标签', default='')
     publisher = models.CharField(max_length=200, verbose_name='发布人', default='')  # 发布人
     parent = models.ForeignKey(NewsCategory, null=True, blank=True, on_delete=models.CASCADE, verbose_name='所属类别')
+    is_enable = models.BooleanField(verbose_name='状态', default=True)
 
     def __unicode__(self):
         return self.title
@@ -28,7 +29,6 @@ class News(models.Model):
     class Meta:
         verbose_name = '文章'
         verbose_name_plural = '文章'  # 设置复数的显示，否则会出现“文章s”
-
 
 # Create your models here.
 # class Tag(models.Model):
@@ -46,4 +46,3 @@ class News(models.Model):
 #
 #     def __unicode__(self):
 #         return self.name
-
