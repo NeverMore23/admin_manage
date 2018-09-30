@@ -46,8 +46,9 @@ INSTALLED_APPS = [
     'ckeditor',  # 富文本编辑器
     'ckeditor_uploader',  # 富文本编辑器上传图片模块
 
-
-    'content'
+    'content',
+    'passport',
+    'activity',
 
 
 
@@ -156,5 +157,5 @@ CKEDITOR_UPLOAD_PATH = 'uploads/'
 
 
 '''
-admin/PASSWORD123456
+admin/password123456
 '''
