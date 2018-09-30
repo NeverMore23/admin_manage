@@ -1,1 +1,4 @@
-about python3 xadmin
+python3 xadmin
+
+pip install xadmin
+pip uninstall xadmin
