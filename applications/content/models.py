@@ -38,7 +38,7 @@ class ArticlesCategory(BaseModel):
 
     class Meta:
         db_table = 't_articles_category'
-        verbose_name = '类别'
+        verbose_name = '文章类别'
         verbose_name_plural = verbose_name
 
     def __str__(self):
