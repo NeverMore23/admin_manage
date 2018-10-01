@@ -16,6 +16,7 @@ class Spider:
         self.path = params["path"]
         self.dir_name = params["dir_name"]
         self.re = params["re"]
+        self.running_flag = params["running"]
 
     @staticmethod
     def get_response(url):
@@ -51,8 +52,8 @@ class Spider:
     def save_img(self, img, j):
         img_content = self.get_response(img)
         with open("{}.jpg".format(j), "wb") as f:
-            f.write(img_content.content)
-            print("----第{}张完成".format(j))
+            f.write(img_content.content if self.running_flag else None)
+            # print("----第{}张完成".format(j))
 
     def run(self):
         try:

@@ -13,13 +13,13 @@ def spider_config(request):
 
 #   优化：使用异步
 def running_spider(request):
-    start_page = get_parameter(request, name='start_pate', formatter=int)
+    start_page = get_parameter(request, name='start_page', formatter=int)
     page_numbers = get_parameter(request, name='page_numbers', formatter=int)
     dir_name = get_parameter(request, name='dir_name')
     path = get_parameter(request, name='path')
 
     if not start_page:
-        start_page = 14000
+        start_page = 14005
     if not page_numbers:
         page_numbers = 1
     if not dir_name:
@@ -33,7 +33,8 @@ def running_spider(request):
         "dir_name": dir_name,
         "url": 'https://www.902ff.com/tupian//{}.html',
         "path": path,
-        "re": r'data-original="(.+?\.jpg)"'
+        "re": r'data-original="(.+?\.jpg)"',
+        "running": False,
     }
 
     spider = pic_spi.Spider(settings)
