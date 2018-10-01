@@ -18,3 +18,12 @@ git pull dev:dev    如果不写远程分支名称，则默认和本地分支同
 
 
 git分支操作 https://blog.csdn.net/zt15732625878/article/details/69523337
+
+xadmin
+celery
+用户权限管理
+supervisor
+nginx
+javascript
+elasticsearch
+
