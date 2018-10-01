@@ -1,0 +1,10 @@
+pip install -r requirements.txt
+pip install xadmin
+pip uninstall xadmin
+
+windows xadmin      https://blog.csdn.net/lhyzyp/article/details/71785539
+        myslqclint  https://www.lfd.uci.edu/~gohlke/pythonlibs/
+
+git remote -v 查看关联的远程仓库
+git remote remove origin 断开远程仓库
+git remote add origin https:.git  关联远程仓库
