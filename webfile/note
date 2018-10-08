@@ -1,7 +1,3 @@
-pip install -r requirements.txt
-pip install xadmin
-pip uninstall xadmin
-
 windows xadmin      https://blog.csdn.net/lhyzyp/article/details/71785539
         myslqclint  https://www.lfd.uci.edu/~gohlke/pythonlibs/
 
@@ -20,12 +16,3 @@ git checkout -b dev 从已有分支创建新的分支dev
 
 
 git分支操作 https://blog.csdn.net/zt15732625878/article/details/69523337
-
-xadmin
-celery
-用户权限管理
-supervisor
-nginx
-javascript
-elasticsearch
-

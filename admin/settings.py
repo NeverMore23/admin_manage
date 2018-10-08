@@ -70,11 +70,7 @@ ROOT_URLCONF = 'admin.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-<<<<<<< HEAD
-        'DIRS': [],
-=======
         'DIRS': [os.path.join(BASE_DIR, 'templates')],
->>>>>>> 0c80e8dc36abf3cc7feae9621664145a3496a82b
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -98,15 +94,9 @@ DATABASES = {
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'ENGINE': 'django.db.backends.mysql',
         'HOST': '127.0.0.1',
-<<<<<<< HEAD
         'PORT': 3306,
         'USER': 'admindb',
         'PASSWORD': 'mysql',
-=======
-        'PORT': 18088,
-        'USER': 'root',
-        'PASSWORD': 'star1022',
->>>>>>> 0c80e8dc36abf3cc7feae9621664145a3496a82b
         'NAME': 'ZyAdminDB'
     }
 }

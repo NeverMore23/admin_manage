@@ -1,0 +1,17 @@
+xadmin
+celery
+用户权限管理
+supervisor
+nginx
+javascript
+elasticsearch
+
+
+website
+先跑通再说吧
+配置文件生成菜单
+xadmin，用户权限
+若干页面
+		用户登录登出权限管理
+		elasticsearch
+		脚本调用爬虫更新数据库
