@@ -1,5 +1,4 @@
-windows xadmin      https://blog.csdn.net/lhyzyp/article/details/71785539
-        myslqclint  https://www.lfd.uci.edu/~gohlke/pythonlibs/
+git分支操作 https://blog.csdn.net/zt15732625878/article/details/69523337
 
 git remote -v 查看关联的远程仓库地址
 git remote remove origin 断开远程仓库
@@ -16,4 +15,3 @@ git checkout -b dev         从已有分支创建新的分支dev开发
 git rm -r --cached .idea    删除已经Push到远程的文件
 
 
-git分支操作 https://blog.csdn.net/zt15732625878/article/details/69523337
