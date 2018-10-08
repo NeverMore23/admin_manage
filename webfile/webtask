@@ -1,17 +1,15 @@
-xadmin
-celery
-用户权限管理
-supervisor
-nginx
-javascript
-elasticsearch
+1.base project
+    xadmin                  图片预览问题
+    通过settings生成菜单
+    用户权限管理
+    用户登录登出权限管理
+    脚本调用爬虫更新数据库     定时器
+    celery
+    elasticsearch
+
+2.部署
+    supervisor              不支持Python3,可解决,未完成
+    nginx
+    uWSGI
 
 
-website
-先跑通再说吧
-配置文件生成菜单
-xadmin，用户权限
-若干页面
-		用户登录登出权限管理
-		elasticsearch
-		脚本调用爬虫更新数据库
