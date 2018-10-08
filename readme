@@ -15,6 +15,8 @@ git branch dev  创建分支
 git checkout dev 切换分支
 git push origin dev:dev   提交本地分支到远程dev分支
 git pull dev:dev    如果不写远程分支名称，则默认和本地分支同名，命令：$ git push origin dev
+git branch -d dev   删除本地分支dev
+git checkout -b dev 从已有分支创建新的分支dev
 
 
 git分支操作 https://blog.csdn.net/zt15732625878/article/details/69523337
