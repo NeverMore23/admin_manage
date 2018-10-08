@@ -137,8 +137,6 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 
-TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'),)
-
 # 富文本编辑器ckeditor配置
 CKEDITOR_CONFIGS = {
     'default': {
