@@ -1,0 +1,78 @@
+0.	创建py3虚拟环境：
+	ls -l /usr/bin/python*
+	mkvirtualenv  -p /usr/bin/python3 py3_env
+
+	pip freeze | tee requirements.txt或pip freeze >requirements.txt
+	pip install -r requirements.txt
+
+1. 	github
+	git init
+    	git add .
+	git commit -m"--"
+	git remote dd origin htt...
+	git push --set-upstream origin master
+
+	git remote rm origin
+	git remote -v
+
+	git push : Could not resolve host: github.com
+	原因：网络问题
+	重启：sudo service network-manager restart
+
+	合并分支  git merge origin/master
+
+2.	mysql
+	使用root/mysql 报错：(1698, "Access denied for user 'root'@'localhost'")
+	创建用户授权：
+		create user 'klm123'@'localhost' identified by 'klm123';
+		grant usage on *.* to 'klm123'@'localhost';
+		grant all privileges on website.* to 'klm123'@'localhost';
+	或者：
+		create user meiduo identified by 'meiduo';
+		grant all on meiduo_mall.* to 'meiduo'@'%';
+		flush privileges;
+
+	root用户使用sudo -s 登录
+
+3.	admin不显示样式
+4.	不要使用root权限创建应用
+	文件权限：sudo chmod 777 filename
+
+5.	追加导包路径：
+	sys.path.insert(0, os.path.join(BASE_DIR, 'app'))
+	不要删除__init__
+
+6.	doesn't declare an explicit app_label and isn't in an application in INSTALLED_APPS
+	原因：settings中安装应用没有使用应用的绝对路径，应为：'apps.activity.apps.ActivityConfig',
+	需要在定义模型时指定表名，如果是基类需要指定为抽象基类
+	class Meta:
+        		abstract = True
+
+7.	模板标签TemplateSyntaxError: 'permission_tags' is not a registered tag library. Must be one of...
+	需要注册模板标签https://www.cnblogs.com/qwj-sysu/p/4246605.html
+	应用下创建templatetags目录，目录下创建自定义标签
+
+	注意事项：
+	包含templatetags目录的app一定要在INSTALLED_APPS列表里面
+	{% load %}load的是模块名，而不是app名
+	记得使用 from django import template ，register=template.Library()注册
+
+8.	安装Mysqlclient报错
+    	sudo apt-get install mysql-server mysql-client
+    	然后mysql -V查看mysql是否安装成功
+    	sudo  apt-get install libmysqlclient-dev python3-dev
+    	pip install mysqlclient就不会报错找不到'mysql_config'了
+
+
+9.	python3使用xadmin  https://blog.csdn.net/u010358168/article/details/72934494
+
+
+10.	Apps aren't loaded yet.   原因：将model中的模型类导入到了__init__中，这种方法慎用！
+	应用的包不要导入东西，脚本包可以。
+
+
+
+
+
+
+

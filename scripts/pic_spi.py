@@ -16,6 +16,7 @@ class Spider:
         self.path = params["path"]
         self.dir_name = params["dir_name"]
         self.re = params["re"]
+        self.running_flag = params["running"]
 
     @staticmethod
     def get_response(url):
@@ -51,19 +52,18 @@ class Spider:
     def save_img(self, img, j):
         img_content = self.get_response(img)
         with open("{}.jpg".format(j), "wb") as f:
-            f.write(img_content.content)
-            print("----第{}张完成".format(j))
+            f.write(img_content.content if self.running_flag else None)
+            # print("----第{}张完成".format(j))
 
     def run(self):
         try:
             os.chdir(self.path + self.dir_name + "\\")
         except:
             os.chdir(self.path)
-            os.mkdir("img")
+            os.mkdir(self.dir_name)
             os.chdir(self.path + self.dir_name + "\\")
 
         page_list = [p for p in range(self.start_page, self.start_page + self.page_num + 1)]
         # po = Pool(5)
         for page in page_list:
             self.parse_response(page)
-

@@ -1,0 +1,18 @@
+windows xadmin      https://blog.csdn.net/lhyzyp/article/details/71785539
+        myslqclint  https://www.lfd.uci.edu/~gohlke/pythonlibs/
+
+git remote -v 查看关联的远程仓库地址
+git remote remove origin 断开远程仓库
+git remote add origin https:.git  关联远程仓库
+
+
+git branch -a 查看本地和远程分支
+git branch dev  创建分支
+git checkout dev 切换分支
+git push origin dev:dev   提交本地分支到远程dev分支
+git pull dev:dev    如果不写远程分支名称，则默认和本地分支同名，命令：$ git push origin dev
+git branch -d dev   删除本地分支dev
+git checkout -b dev 从已有分支创建新的分支dev
+
+
+git分支操作 https://blog.csdn.net/zt15732625878/article/details/69523337
