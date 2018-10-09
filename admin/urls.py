@@ -15,14 +15,23 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.contrib.auth import views
+from applications.operation.views.operation_views import AdminLoginView, lvs, index
 import xadmin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'xadmin/', include(xadmin.site.urls)),
+
+    url(r'^$', index, name=u'基础权限|查看首页'),
+    url(r'^signin/$', AdminLoginView.as_view(), name="signin"),
+    url(r'^signout/$', views.logout_then_login, name="signout"),
+    url(r'^lvs$', lvs, name="lvs"),
+
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
+
+    url(r'^spider/', include('spider.urls')),
     # url(r'^passport/', include('passport.urls')),
     # url(r'^activity/', include('activity.urls')),
-    url(r'^spider/', include('spider.urls')),
 
 ]

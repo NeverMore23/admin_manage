@@ -3,6 +3,10 @@
     settings封装             done
     通过settings生成菜单
 
+2.部署
+    supervisor              不支持Python3,可解决,未完成
+    nginx
+    uWSGI
 
 3.模块
     用户权限管理
@@ -12,7 +16,3 @@
     elasticsearch
 
 
-2.部署
-    supervisor              不支持Python3,可解决,未完成
-    nginx
-    uWSGI
