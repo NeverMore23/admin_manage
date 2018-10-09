@@ -46,11 +46,27 @@ def load_settings(settings, DEBUG=False, **kwargs):
                 'default': {
                     'ENGINE': 'django.db.backends.mysql',
                     'HOST': '127.0.0.1',
+                    'PORT': 18088,
+                    'USER': 'root',
+                    'PASSWORD': 'star1022',
+                    'NAME': 'ZyAdminDB'
+                },
+                'windows': {
+                    'ENGINE': 'django.db.backends.mysql',
+                    'HOST': '127.0.0.1',
+                    'PORT': 18088,
+                    'USER': 'root',
+                    'PASSWORD': 'star1022',
+                    'NAME': 'ZyAdminDB'
+                },
+                'linux': {
+                    'ENGINE': 'django.db.backends.mysql',
+                    'HOST': '127.0.0.1',
                     'PORT': 3306,
                     'USER': 'admindb',
                     'PASSWORD': 'mysql',
                     'NAME': 'ZyAdminDB'
-                }
+                },
             },
 
             'TEMPLATES': [
