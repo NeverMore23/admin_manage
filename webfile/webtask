@@ -2,6 +2,9 @@
     xadmin                  图片预览问题
     settings封装             done
     通过settings生成菜单
+    caches
+    log
+
 
 2.部署
     supervisor              不支持Python3,可解决,未完成
