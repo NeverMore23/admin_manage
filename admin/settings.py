@@ -9,7 +9,7 @@ sys.path.insert(0, os.path.join(BASE_DIR, 'scripts'))
 sys.path.insert(0, os.path.join(BASE_DIR, 'applications'))
 
 
-def load_settings(settings, debug=True, **kwargs):
+def load_settings(settings, DEBUG=False, **kwargs):
     settings.update(
         {
             'DEBUG': True,
@@ -44,8 +44,6 @@ def load_settings(settings, debug=True, **kwargs):
 
             'DATABASES': {
                 'default': {
-                    # 'ENGINE': 'django.db.backends.sqlite3',
-                    # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
                     'ENGINE': 'django.db.backends.mysql',
                     'HOST': '127.0.0.1',
                     'PORT': 3306,
