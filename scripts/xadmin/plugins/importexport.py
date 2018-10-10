@@ -5,7 +5,7 @@ Author:zcyuefan
 Topic:django-import-export plugin for xadmin to help importing and exporting data using .csv/.xls/.../.json files
 
 Use:
-+++ settings.py +++
++++ settings_lin.py +++
 INSTALLED_APPS = (
     ...
     'import_export',

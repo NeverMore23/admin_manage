@@ -12,7 +12,7 @@
     uWSGI
 
 3.模块
-    用户权限管理
+    RBAC                    Rose base Access Controller
     用户登录登出权限管理
     脚本调用爬虫更新数据库     定时器
     celery
