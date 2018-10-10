@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import importlib
+import platform
 
 from django.core.management import execute_from_command_line
 from django.conf import settings as django_settings
@@ -8,11 +9,11 @@ from django.conf import settings as django_settings
 def load_django_settings(mode='develop'):
     settings = {}
     kwargs = {}
-    mods = [importlib.import_module('admin.settings')]
+    mods = [importlib.import_module('admin.settings_lin')]
 
-    if mode == "develop":
+    if platform.system() == "Windows":
         try:
-            mods.append(importlib.import_module('dev_settings'))
+            mods.append(importlib.import_module('settings_win'))
         except ImportError:
             pass
 
