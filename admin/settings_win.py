@@ -130,4 +130,5 @@ def load_settings(settings, DEBUG=False, **kwargs):
 
 '''
 admin/password123456
+#   mysql -h localhost -P端口 -u root -p 123456
 '''
