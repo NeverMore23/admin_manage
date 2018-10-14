@@ -59,12 +59,14 @@
 	记得使用 from django import template ，register=template.Library()注册
 
 8.	安装Mysqlclient报错
+		首先检查在__init__文件中是不是导入了Mysql驱动
     	sudo apt-get install mysql-server mysql-client
     	然后mysql -V查看mysql是否安装成功
     	sudo  apt-get install libmysqlclient-dev python3-dev
     	pip install mysqlclient就不会报错找不到'mysql_config'了
 
     安装myslqclint  https://www.lfd.uci.edu/~gohlke/pythonlibs/
+	
 
 
 9.	python3使用xadmin  https://blog.csdn.net/u010358168/article/details/72934494
