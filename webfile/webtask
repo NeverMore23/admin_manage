@@ -1,7 +1,6 @@
 1.base project
     xadmin                  图片预览问题
     settings封装             done
-    通过settings生成菜单
     caches
     log
 
@@ -18,4 +17,6 @@
     celery
     elasticsearch
 
+    tornado_web
+    微信小程序
 
