@@ -44,10 +44,12 @@
 	不要删除__init__
 
 6.	doesn't declare an explicit app_label and isn't in an application in INSTALLED_APPS
-	原因：settings中安装应用没有使用应用的绝对路径，应为：'apps.activity.apps.ActivityConfig',
-	需要在定义模型时指定表名，如果是基类需要指定为抽象基类
+	原因1：settings中安装应用没有使用应用的绝对路径，应为：'apps.activity.apps.ActivityConfig',
+	2:需要在定义模型时指定表名，如果是基类需要指定为抽象基类
 	class Meta:
         		abstract = True
+    3:多数情况下因为某个相关导包路径导致(使用绝对路径),例如from apps.users.models  改为 from users.models..
+        (模型类导来导去时候产生(循环引用),app需要分层设计)
 
 7.	模板标签TemplateSyntaxError: 'permission_tags' is not a registered tag library. Must be one of...
 	需要注册模板标签https://www.cnblogs.com/qwj-sysu/p/4246605.html
@@ -76,7 +78,8 @@
 	应用的包不要导入东西，脚本包可以。
 
 
-
+11. xadmni 应用标题显示别称需：1.应用apps下注册别称(中文名称);
+    2.应用__init__中指定default_app_config = 'users.apps.UsersConfig'
 
 
 
