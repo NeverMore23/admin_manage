@@ -78,6 +78,7 @@ def load_settings(settings, DEBUG=False, **kwargs):
                 'django.contrib.auth.middleware.AuthenticationMiddleware',
                 'django.contrib.messages.middleware.MessageMiddleware',
                 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+                'RBAC.middleware.rbac.RbacMiddleware'  # 加入自定义的中间件到最后
             ],
 
             # Password validation
@@ -123,6 +124,20 @@ def load_settings(settings, DEBUG=False, **kwargs):
             'MEDIA_URL': '/home/klm/PycharmProjects/media/',
             'MEDIA_ROOT': os.path.join(BASE_DIR, '/home/klm/PycharmProjects/media/'),
             'CKEDITOR_UPLOAD_PATH': '/home/klm/PycharmProjects/media/uploads/',
+
+            'LOGIN_URL': '/login/',
+
+            'REGEX_URL': r'^{url}$',  # url作严格匹配,
+
+            # 配置url权限白名单
+            'SAFE_URL': [
+                           r'/login/',
+                           '/admin/.*',
+                           '/test/',
+                           '/index/',
+                           '^/rbac/',
+                       ],
+
 
         }
     )

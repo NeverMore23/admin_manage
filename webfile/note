@@ -16,3 +16,17 @@ git push origin --delete dev    删除远程分支dev
 git rm -r --cached .idea        删除已经Push到远程的文件.idea
 
 git checkout -b dev         从已有分支创建新的分支dev开发
+
+
+1.本地复制文件到服务器
+    ~ scp /Users/guolm/Desktop/ROOT.war root@192.168.1.228:/opt/tomcat/webapps/
+
+2.服务器到本地文件
+    ~ scp root@192.168.1.228:/opt/tomcat/webapps/ROOT.war  /User/guolm/Desktop/
+
+3.本地复制目录到服务器
+   ~scp -r  /Users/guolm/Desktop/   root@192.168.1.228:/opt/tomcat/webapps/
+
+4.服务器复制文件到本地文件
+    ~ scp root@192.168.1.228:/opt/tomcat/webapps/  /User/guolm/Desktop/
+

@@ -3,7 +3,7 @@
 	mkvirtualenv  -p /usr/bin/python3 py3_env
 
 	pip freeze | tee requirements.txt或pip freeze >requirements.txt
-	pip install -r requirements.txt
+	sudo pip install -r requirements.txt  切记使用sudo
 
 1. 	github
 	git init
