@@ -1,5 +1,3 @@
-from django.shortcuts import render
-
 from django.shortcuts import render, redirect, HttpResponse
 from RBAC.models import UserInfo
 from RBAC.service.init_permission import init_permission
