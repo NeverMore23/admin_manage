@@ -46,7 +46,7 @@ openpyxl==2.5.3
 Pillow==5.0.0
 pycparser==2.19
 pycryptodomex==3.6.1
-PyJWT==1.6.1
+PyJWT==2.4.0
 PyMySQL==0.8.0
 python-alipay-sdk==1.7.1
 python-dateutil==2.7.2
